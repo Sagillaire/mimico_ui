@@ -2,6 +2,7 @@ import { TThemeColor } from "../theme";
 
 interface ITypographyLabel {
   size: TSize;
+  isText: Boolean;
   color?: TThemeColor;
   fontWeight: IBoldTypes;
 }

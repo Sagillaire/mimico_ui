@@ -16,6 +16,7 @@ export const Typography: FC<ITypography> = ({
       <TypographyLabel
         color={color}
         fontWeight={fontWeight}
+        isText={!size.includes("h")}
         size={EnumTextSize?.[size as TSize] as never}
         style={[size === "h1" && GlobalSheet.shadowText]}
       >

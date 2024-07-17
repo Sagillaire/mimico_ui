@@ -19,12 +19,15 @@ export const Checkbox: FC<ICheckbox> = ({
   return (
     <CheckboxContainer radioMode={radioMode}>
       {options?.map(({ label, value }) => (
-        <RadioContent key={`option-check-${label}-${value}`}>
-          <RadioButton onPress={() => handleSelect(value)}>
+        <RadioButton
+          onPress={() => handleSelect(value)}
+          key={`option-check-${label}-${value}`}
+        >
+          <RadioContent>
             {selected.includes(value) && <RadioSelected />}
-          </RadioButton>
+          </RadioContent>
           <RadioLabel>{label}</RadioLabel>
-        </RadioContent>
+        </RadioButton>
       ))}
     </CheckboxContainer>
   );

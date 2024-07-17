@@ -11,13 +11,13 @@ export const CheckboxContainer = styled.View<{ radioMode: TRadioMode }>`
   flex-direction: ${({ radioMode }) => radioMode};
 `;
 
-export const RadioContent = styled.View`
+export const RadioButton = styled.TouchableOpacity`
   gap: 5px;
   align-items: center;
   flex-direction: row;
 `;
 
-export const RadioButton = styled.TouchableOpacity`
+export const RadioContent = styled.View`
   width: 25px;
   height: 25px;
   align-items: center;
@@ -31,7 +31,7 @@ export const RadioButton = styled.TouchableOpacity`
 
 export const RadioLabel = styled.Text`
   font-size: 16px;
-  font-family: CarterOne;
+  font-family: OutfitRegular;
   color: ${({}) => GlobalTheme.light.main.brown};
 `;
 

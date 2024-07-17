@@ -27,7 +27,7 @@ export default function App() {
     <SafeAreaView style={GlobalSheet.container}>
       <ImageBackground style={GlobalSheet.image} source={image}>
         <View style={GlobalSheet.ViewContent}>
-          <Typography
+          {/* <Typography
             size="h1"
             text="H1 - Aa"
             fontWeight="normal"
@@ -43,7 +43,7 @@ export default function App() {
           <Typography size="sm" text="Texto equeño" />
           <Typography size="subtext" text="Subtext" />
           <Typography size="microtext" text="Micro" />
-          <StatusBar style="auto" />
+          <StatusBar style="auto" /> */}
 
           {/* --------- TEST BUTTONS --------- */}
           {/* <Button title="Botón" type="primary" />
@@ -89,9 +89,9 @@ export default function App() {
         /> */}
 
           {/* ---------  INPUT --------- */}
-          {/* <Input placeholder="Mimico username" label="User" />
+          <Input placeholder="Mimico username" label="User" />
           <Input placeholder="Mimico email" label="Email" />
-          <Input placeholder="Share your oppinion..." label="Comments" isArea /> */}
+          <Input placeholder="Share your oppinion..." label="Comments" isArea />
 
           {/* --------- RADIO --------- */}
           {/* <Radio
