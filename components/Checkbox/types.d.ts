@@ -1,7 +1,7 @@
 export interface ICheckbox {
-  options: ICheckboxOptions[];
   radioMode?: TRadioMode;
-  onChange?: (value?: number) => void;
+  options: ICheckboxOptions[];
+  onChange?: (selectedValues: number[]) => void;
 }
 
 export interface ICheckboxOptions {

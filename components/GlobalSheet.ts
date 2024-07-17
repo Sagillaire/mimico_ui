@@ -1,3 +1,4 @@
+import { GlobalTheme } from "./theme";
 import { StyleSheet } from "react-native";
 
 export const GlobalSheet = StyleSheet.create({
@@ -23,5 +24,10 @@ export const GlobalSheet = StyleSheet.create({
     flex: 1,
     width: "100%",
     resizeMode: "cover",
+  },
+  shadowText: {
+    textShadowRadius: 1,
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowColor: GlobalTheme.light.color.tertiary,
   },
 });

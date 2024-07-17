@@ -1,13 +1,14 @@
 import { TRadioMode } from "./types";
+import { GlobalTheme } from "../theme";
 import styled from "styled-components/native";
 
-export const RadioContainer = styled.View<{ radioMode: TRadioMode }>`
+export const CheckboxContainer = styled.View<{ radioMode: TRadioMode }>`
   gap: 10px;
   width: 100%;
   height: auto;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: space-between;
+  flex-direction: ${({ radioMode }) => radioMode};
 `;
 
 export const RadioContent = styled.View`
@@ -20,21 +21,23 @@ export const RadioButton = styled.TouchableOpacity`
   width: 25px;
   height: 25px;
   align-items: center;
-  border: 3px solid black;
   justify-content: center;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  border: 3px solid ${({}) => GlobalTheme.light.main.brown};
 `;
 
 export const RadioLabel = styled.Text`
   font-size: 16px;
-  font-weight: 500;
+  font-family: CarterOne;
+  color: ${({}) => GlobalTheme.light.main.brown};
 `;
 
 export const RadioSelected = styled.View`
-  width: 12px;
-  height: 12px;
-  background-color: black;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: ${({}) => GlobalTheme.light.main.brownAccent};
 `;

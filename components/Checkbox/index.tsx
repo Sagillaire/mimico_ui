@@ -1,31 +1,31 @@
-import { FC } from "react";
 import {
-  RadioButton,
-  RadioContainer,
-  RadioContent,
   RadioLabel,
+  RadioButton,
+  RadioContent,
   RadioSelected,
+  CheckboxContainer,
 } from "./styled";
+import { FC } from "react";
 import { ICheckbox } from "./types";
-import { useRadio } from "./useRadio";
+import { useCheck } from "./useRadio";
 
 export const Checkbox: FC<ICheckbox> = ({
   options,
   onChange,
   radioMode = "row",
 }) => {
-  const { selected, handleSelect } = useRadio(onChange);
+  const { selected, handleSelect } = useCheck(onChange);
 
   return (
-    <RadioContainer radioMode={radioMode}>
+    <CheckboxContainer radioMode={radioMode}>
       {options?.map(({ label, value }) => (
-        <RadioContent key={`option-${label}-${value}`}>
+        <RadioContent key={`option-check-${label}-${value}`}>
           <RadioButton onPress={() => handleSelect(value)}>
-            {selected === value && <RadioSelected />}
+            {selected.includes(value) && <RadioSelected />}
           </RadioButton>
           <RadioLabel>{label}</RadioLabel>
         </RadioContent>
       ))}
-    </RadioContainer>
+    </CheckboxContainer>
   );
 };

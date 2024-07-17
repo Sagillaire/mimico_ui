@@ -11,8 +11,10 @@ interface BorderPalette {
   secondary: string;
 }
 
-interface TextColorPalette {
+interface ThemeTextColorPalette {
+  text: string;
   primary: string;
+  tertiary: string;
   secondary: string;
 }
 
@@ -24,12 +26,14 @@ interface Theme {
   main: ColorPalette;
   border: BorderPalette;
   background: Background;
-  color: TextColorPalette;
+  color: ThemeTextColorPalette;
 }
 
 interface IGlobalTheme {
   light: Theme;
 }
+
+export type TThemeColor = "text" | "primary" | "secondary";
 
 export const GlobalTheme: IGlobalTheme = {
   light: {
@@ -48,8 +52,10 @@ export const GlobalTheme: IGlobalTheme = {
       secondary: "#D73F3F",
     },
     color: {
+      text: "#5C5C5C",
       primary: "#FAF1E0",
       secondary: "#D73F3F",
+      tertiary: "#000000",
     },
   },
 };
